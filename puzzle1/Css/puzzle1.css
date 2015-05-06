@@ -1,0 +1,21 @@
+.puzzle {
+  overflow: hidden;
+  display: block;
+  position: relative; }
+  .puzzle img {
+    max-width: 100%;
+    width: 100%; }
+  .puzzle .tile {
+    display: block;
+    float: left;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    position: absolute; }
+  .puzzle .tileId {
+    color: #333;
+    font-family: georgia, serif;
+    font-size: 3em;
+    opacity: 0.25;
+    text-align: center;
+    text-shadow: 0 0 10px #fff; }
+
