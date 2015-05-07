@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slider Puzzle 2</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/puzzle2.css" />
+	</head>
+	<body>
+		<div id="content">
+			<h1>Slider Puzzle 2</h1>
+			<div class="puzzle" id="board">
+				<img src="images/puzzle.png" />
+			</div>
+		</div>
+		<script src="/scripts/jquery.js"></script>
+		<script src="/scripts/puzzle2.js"></script>
+		<script>
+			$(window).load(function () {
+				$('#board').puzzle2({ _boardSize: 4 });
+			});
+		</script>
+	</body>
+</html>

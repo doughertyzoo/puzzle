@@ -1,0 +1,112 @@
+$primary-font-color: #de690f;
+$secondary-font-color: #1c808c;
+$accent-font-color: #6fd9d9;
+$body-font-color: #666;
+$white: #f1f1f1;
+
+body {
+	background-color: $white;
+	font: 1.0em/150% Arial, Helvetica, sans-serif;
+	color: $body-font-color;
+}
+
+a {
+	color: $secondary-font-color;
+	&:hover {
+		color: $accent-font-color;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-size: 1.875em;
+	margin-bottom: 1.0em;
+	color: $secondary-font-color;
+}
+
+#content {
+	width: 75%;
+	margin: 0 auto;
+	@media screen and (min-width: 40.0em){
+		width: 80%;
+	}
+	@media screen and (min-width: 64.0em){
+		width: 85%;
+	}
+}
+
+#legend {
+	margin-bottom: 1.5em;
+	a {
+		color: $white;
+		display:inline-block;
+		background-color: $primary-font-color;
+		padding: 0.625em;
+		min-width: 8.375em;
+		text-align: center;
+		font-weight: bold;
+		text-transform: lowercase;
+		text-decoration: none;
+		&:hover {
+			background-color: scale-color($primary-font-color, $lightness: -10%)
+		}
+	}
+	span {
+		color: $primary-font-color;
+		display:inline-block;
+		background-color: $white;
+		border: 3px solid $primary-font-color;
+		padding: 0.438em 0.625em;
+		min-width: 8.375em;
+		text-align: center;
+		font-weight: bold;
+		text-transform: lowercase;
+		em {
+			font-style: normal;
+		}
+	}
+	&.disabled {
+		a {
+			background-color: $secondary-font-color;
+			cursor: default;
+		}
+		span {
+			border: 3px solid $secondary-font-color;
+			color: $secondary-font-color;
+		}
+	}
+}
+
+#board {
+	overflow: hidden;
+	display: block;
+	position: relative;
+	margin-bottom: 1.5em;
+	.tile {
+		display: block;
+		float: left;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		position: absolute;
+		&.empty {
+			background: $white;
+			opacity: 0;
+		}
+		.tileId {
+			color: $white;
+			font: {
+				family: georgia, serif;
+				size: 3.0em;
+			}
+			opacity: 0.75;
+			text:{
+				align: center;
+				shadow: 0 0 10px $accent-font-color;
+			}
+		}
+	}
+}
